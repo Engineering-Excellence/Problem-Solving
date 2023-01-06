@@ -3,28 +3,28 @@ package kr.co.programmers.lv0;
 import java.util.Scanner;
 
 // 사칙연산
-class Day01 {
+class ElementaryArithmetic {
 
     // 두 수의 합
-    int add(int num1, int num2) {
+    private int add(int num1, int num2) {
 
         return num1 + num2;
     }
 
     // 두 수의 차
-    int subtract(int num1, int num2) {
+    private int subtract(int num1, int num2) {
 
         return num1 - num2;
     }
 
     // 두 수의 곱
-    int multiply(int num1, int num2) {
+    private int multiply(int num1, int num2) {
 
         return num1 * num2;
     }
 
     // 몫 구하기
-    int divide(int num1, int num2) {
+    private int divide(int num1, int num2) {
 
         return num1 / num2;
     }
@@ -38,7 +38,7 @@ class Day01 {
         int num2 = scanner.nextInt();
         scanner.close();
 
-        Day01 obj = new Day01();
+        ElementaryArithmetic obj = new ElementaryArithmetic();
         System.out.printf("%d + %d = %d%n", num1, num2, obj.add(num1, num2));
         System.out.printf("%d - %d = %d%n", num1, num2, obj.subtract(num1, num2));
         System.out.printf("%d × %d = %d%n", num1, num2, obj.multiply(num1, num2));
