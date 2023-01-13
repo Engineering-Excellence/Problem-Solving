@@ -18,6 +18,16 @@ public class Mathematics {
         return array[array.length / 2];
     }
 
+    // 짝수는 싫어요
+    private int[] odd(int n) {
+
+        int[] answer = new int[(n + 1) / 2];
+        for (int i = 0; i < answer.length; i++) {
+            answer[i] = 2 * i + 1;
+        }
+        return answer;
+    }
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -30,5 +40,7 @@ public class Mathematics {
         Mathematics mathematics = new Mathematics();
         System.out.printf("%d %% %d = %d%n", num1, num2, mathematics.mod(num1, num2));
         System.out.println(mathematics.median(new int[]{9, -1, 0}));
+        System.out.println(Arrays.toString(mathematics.odd(10)));
+        System.out.println(Arrays.toString(mathematics.odd(15)));
     }
 }
