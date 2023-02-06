@@ -15,7 +15,8 @@ public class Array {
 
         int lcm = getLCM(Math.max(n, 6), Math.min(n, 6));
         int answer = lcm / 6;
-        if (n != 0) System.out.printf("%d명이 모두 같은 양을 먹기 위해 최소 %d판을 시켜야 피자가 %d조각으로 모두 %d조각씩 먹을 수 있습니다.%n", n, answer, 6 * answer, 6 * answer / n);
+        if (n != 0)
+            System.out.printf("%d명이 모두 같은 양을 먹기 위해 최소 %d판을 시켜야 피자가 %d조각으로 모두 %d조각씩 먹을 수 있습니다.%n", n, answer, 6 * answer, 6 * answer / n);
     }
 
     // 최대공약수
@@ -31,6 +32,21 @@ public class Array {
         return a * b / getGCD(a, b);
     }
 
+    // 피자 나눠 먹기 (3)
+    private void pizza3(int slice, int n) {
+
+        System.out.printf("%d명이 %d조각으로 자른 피자를 한 조각 이상씩 먹으려면 최소 %d판을 시켜야 합니다.%n", n, slice, n % slice == 0 ? n / slice : n / slice + 1);
+    }
+
+    // 배열의 평균값
+    private void avgArr(int[] numbers) {
+        double sum = 0;
+        for (int number : numbers) {
+            sum += number;
+        }
+        System.out.println(sum / numbers.length);
+    }
+
     public static void main(String[] args) {
 
         Array array = new Array();
@@ -44,5 +60,15 @@ public class Array {
         array.pizza2(6);
         array.pizza2(10);
         array.pizza2(4);
+
+        System.out.println("================================================================================================");
+
+        array.pizza3(7, 10);
+        array.pizza3(4, 12);
+
+        System.out.println("================================================================================================");
+
+        array.avgArr(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+        array.avgArr(new int[]{89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99});
     }
 }
