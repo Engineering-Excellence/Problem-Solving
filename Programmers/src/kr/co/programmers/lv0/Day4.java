@@ -1,7 +1,7 @@
 package kr.co.programmers.lv0;
 
 // 수학, 배열
-public class Array {
+public class Day4 {
 
     // 피자 나눠 먹기 (1)
     private void pizza1(int n) {
@@ -49,26 +49,26 @@ public class Array {
 
     public static void main(String[] args) {
 
-        Array array = new Array();
+        Day4 day4 = new Day4();
 
-        array.pizza1(7);
-        array.pizza1(1);
-        array.pizza1(15);
-
-        System.out.println("================================================================================================");
-
-        array.pizza2(6);
-        array.pizza2(10);
-        array.pizza2(4);
+        day4.pizza1(7);
+        day4.pizza1(1);
+        day4.pizza1(15);
 
         System.out.println("================================================================================================");
 
-        array.pizza3(7, 10);
-        array.pizza3(4, 12);
+        day4.pizza2(6);
+        day4.pizza2(10);
+        day4.pizza2(4);
 
         System.out.println("================================================================================================");
 
-        array.avgArr(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
-        array.avgArr(new int[]{89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99});
+        day4.pizza3(7, 10);
+        day4.pizza3(4, 12);
+
+        System.out.println("================================================================================================");
+
+        day4.avgArr(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+        day4.avgArr(new int[]{89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99});
     }
 }

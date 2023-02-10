@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 // 사칙연산, 조건문, 배열
-class Conditional {
+class Day2 {
 
     // 두 수의 나눗셈
     private int divide(int num1, int num2) {
@@ -20,10 +20,10 @@ class Conditional {
     }
 
     // 분수의 덧셈
-    private int[] sumFraction(int denum1, int num1, int denum2, int num2) {
+    private int[] sumFraction(int numer1, int denom1, int numer2, int denom2) {
 
-        int numerator = denum1 * num2 + num1 * denum2;
-        int denominator = num1 * num2;
+        int numerator = numer1 * denom2 + denom1 * numer2;
+        int denominator = denom1 * denom2;
         int gcd = getGCD(Math.max(numerator, denominator), Math.min(numerator, denominator));
 
         return new int[]{numerator / gcd, denominator / gcd};
@@ -58,7 +58,7 @@ class Conditional {
         int denum1 = random.nextInt(1, 1000);
         int denum2 = random.nextInt(1, 1000);
 
-        Conditional obj = new Conditional();
+        Day2 obj = new Day2();
         System.out.printf("[%d / %d * 1000] = %d%n", num1, num2, obj.divide(num1, num2));
         System.out.printf("%d %s %d%n", num1, obj.isEqual(num1, num2) == 1 ? "==" : "!=", num2);
         System.out.printf("%d/%d + %d/%d = %d/%d%n", denum1, num1, denum2, num2, obj.sumFraction(denum1, num1, denum2, num2)[0], obj.sumFraction(denum1, num1, denum2, num2)[1]);

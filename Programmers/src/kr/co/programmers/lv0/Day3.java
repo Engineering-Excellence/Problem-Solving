@@ -3,7 +3,7 @@ package kr.co.programmers.lv0;
 import java.util.*;
 
 // 사칙연산, 배열, 수학
-public class Mathematics {
+public class Day3 {
 
     // 나머지 구하기
     private int mod(int num1, int num2) {
@@ -56,14 +56,14 @@ public class Mathematics {
         int num2 = scanner.nextInt();
         scanner.close();
 
-        Mathematics mathematics = new Mathematics();
-        System.out.printf("%d %% %d = %d%n", num1, num2, mathematics.mod(num1, num2));
-        System.out.println(mathematics.median(new int[]{9, -1, 0}));
-        System.out.println(mathematics.mode(new int[]{1, 2, 3, 3, 3, 4}));
-        System.out.println(mathematics.mode(new int[]{1, 2, 2, 1}));
-        System.out.println(mathematics.mode(new int[]{1}));
-        System.out.println(mathematics.mode(new int[]{1, 2, 3, 3, 3, 4, 5, 5, 5, 5}));
-        System.out.println(Arrays.toString(mathematics.odd(10)));
-        System.out.println(Arrays.toString(mathematics.odd(15)));
+        Day3 day3 = new Day3();
+        System.out.printf("%d %% %d = %d%n", num1, num2, day3.mod(num1, num2));
+        System.out.println(day3.median(new int[]{9, -1, 0}));
+        System.out.println(day3.mode(new int[]{1, 2, 3, 3, 3, 4}));
+        System.out.println(day3.mode(new int[]{1, 2, 2, 1}));
+        System.out.println(day3.mode(new int[]{1}));
+        System.out.println(day3.mode(new int[]{1, 2, 3, 3, 3, 4, 5, 5, 5, 5}));
+        System.out.println(Arrays.toString(day3.odd(10)));
+        System.out.println(Arrays.toString(day3.odd(15)));
     }
 }

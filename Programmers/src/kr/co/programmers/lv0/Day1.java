@@ -3,7 +3,7 @@ package kr.co.programmers.lv0;
 import java.util.Scanner;
 
 // 사칙연산
-class ElementaryArithmetic {
+class Day1 {
 
     // 두 수의 합
     private int add(int num1, int num2) {
@@ -38,7 +38,7 @@ class ElementaryArithmetic {
         int num2 = scanner.nextInt();
         scanner.close();
 
-        ElementaryArithmetic obj = new ElementaryArithmetic();
+        Day1 obj = new Day1();
         System.out.printf("%d + %d = %d%n", num1, num2, obj.add(num1, num2));
         System.out.printf("%d - %d = %d%n", num1, num2, obj.subtract(num1, num2));
         System.out.printf("%d × %d = %d%n", num1, num2, obj.multiply(num1, num2));
