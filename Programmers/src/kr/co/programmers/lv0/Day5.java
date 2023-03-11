@@ -33,6 +33,16 @@ public class Day5 {
         return today.getYear() - age + 1;
     }
 
+    // 배열 뒤집기
+    private int[] reverse(int[] num_list) {
+
+        int[] answer = new int[num_list.length];
+        for (int i = 0; i < num_list.length; i++) {
+            answer[i] = num_list[num_list.length - 1 - i];
+        }
+        return answer;
+    }
+
     public static void main(String[] args) {
 
         Day5 day5 = new Day5();
@@ -49,5 +59,11 @@ public class Day5 {
 
         System.out.println(day5.birth(35));
         System.out.println(day5.birth(23));
+
+        System.out.println("=================================================");
+
+        System.out.println(Arrays.toString(day5.reverse(new int[]{1, 2, 3, 4, 5})));
+        System.out.println(Arrays.toString(day5.reverse(new int[]{1, 1, 1, 1, 1, 2})));
+        System.out.println(Arrays.toString(day5.reverse(new int[]{1, 0, 1, 1, 1, 3, 5})));
     }
 }
