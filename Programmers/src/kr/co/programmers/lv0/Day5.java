@@ -1,5 +1,6 @@
 package kr.co.programmers.lv0;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 
 // 수학, 배열
@@ -25,6 +26,13 @@ public class Day5 {
         return new int[]{money / 5500, money % 5500};
     }
 
+    // 나이 출력
+    private int birth(int age) {
+
+        LocalDate today = LocalDate.now();
+        return today.getYear() - age + 1;
+    }
+
     public static void main(String[] args) {
 
         Day5 day5 = new Day5();
@@ -36,5 +44,10 @@ public class Day5 {
 
         System.out.println(Arrays.toString(day5.americano(5500)));
         System.out.println(Arrays.toString(day5.americano(15000)));
+
+        System.out.println("=================================================");
+
+        System.out.println(day5.birth(35));
+        System.out.println(day5.birth(23));
     }
 }
