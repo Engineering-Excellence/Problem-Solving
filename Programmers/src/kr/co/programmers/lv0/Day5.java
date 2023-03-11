@@ -1,5 +1,7 @@
 package kr.co.programmers.lv0;
 
+import java.util.Arrays;
+
 // 수학, 배열
 public class Day5 {
 
@@ -17,6 +19,12 @@ public class Day5 {
         return price;
     }
 
+    // 아이스 아메리카노
+    private int[] americano(int money) {
+
+        return new int[]{money / 5500, money % 5500};
+    }
+
     public static void main(String[] args) {
 
         Day5 day5 = new Day5();
@@ -25,5 +33,8 @@ public class Day5 {
         System.out.println(day5.discount(580000));
 
         System.out.println("=================================================");
+
+        System.out.println(Arrays.toString(day5.americano(5500)));
+        System.out.println(Arrays.toString(day5.americano(15000)));
     }
 }
