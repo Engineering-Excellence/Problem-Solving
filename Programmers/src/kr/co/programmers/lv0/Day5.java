@@ -34,7 +34,7 @@ public class Day5 {
     }
 
     // 배열 뒤집기
-    private int[] reverse(int[] num_list) {
+    private int[] reverseArr(int[] num_list) {
 
         int[] answer = new int[num_list.length];
         for (int i = 0; i < num_list.length; i++) {
@@ -62,8 +62,8 @@ public class Day5 {
 
         System.out.println("=================================================");
 
-        System.out.println(Arrays.toString(day5.reverse(new int[]{1, 2, 3, 4, 5})));
-        System.out.println(Arrays.toString(day5.reverse(new int[]{1, 1, 1, 1, 1, 2})));
-        System.out.println(Arrays.toString(day5.reverse(new int[]{1, 0, 1, 1, 1, 3, 5})));
+        System.out.println(Arrays.toString(day5.reverseArr(new int[]{1, 2, 3, 4, 5})));
+        System.out.println(Arrays.toString(day5.reverseArr(new int[]{1, 1, 1, 1, 1, 2})));
+        System.out.println(Arrays.toString(day5.reverseArr(new int[]{1, 0, 1, 1, 1, 3, 5})));
     }
 }
