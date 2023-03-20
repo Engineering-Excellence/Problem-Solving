@@ -51,6 +51,21 @@ public class Day6 {
         return answer;
     }
 
+    // 문자 반복 출력하기
+    private String repeatStr(String my_string, int n) {
+
+        StringBuilder answer = new StringBuilder();
+        for (char c : my_string.toCharArray()) {
+            answer.append(String.valueOf(c).repeat(n));
+        }
+        return answer.toString();
+
+        /*
+            toCharArray(): String 타입을 char[] 타입으로 변경
+            ※ char[] 타입을 String()을 사용하여 String 타입으로 변경 가능
+         */
+    }
+
     public static void main(String[] args) {
 
         Day6 day6 = new Day6();
@@ -66,5 +81,9 @@ public class Day6 {
 
         System.out.println(Arrays.toString(day6.evenOdd(new int[]{1, 2, 3, 4, 5})));
         System.out.println(Arrays.toString(day6.evenOdd(new int[]{1, 3, 5, 7})));
+
+        System.out.println("=================================================");
+
+        System.out.println(day6.repeatStr("hello", 3));
     }
 }
