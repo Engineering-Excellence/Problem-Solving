@@ -21,6 +21,9 @@ public class Day7 {
         return answer;
     }
 
+    // 각도기
+
+
     public static void main(String[] args) {
 
         Day7 day7 = new Day7();
