@@ -21,8 +21,11 @@ public class Day7 {
         return answer;
     }
 
-    // 각도기
+    // 양꼬치
+    private int bill(int n, int k) {
 
+        return 12000 * n + 2000 * k - (n / 10) * 2000;
+    }
 
     public static void main(String[] args) {
 
@@ -32,5 +35,8 @@ public class Day7 {
         System.out.println(day7.removeChar("BCBdbe", "B"));
 
         System.out.println("=================================================");
+
+        System.out.printf("%,d%n", day7.bill(10, 3));
+        System.out.printf("%,d%n", day7.bill(64, 6));
     }
 }
