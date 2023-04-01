@@ -27,6 +27,12 @@ public class Day7 {
         return 12000 * n + 2000 * k - (n / 10) * 2000;
     }
 
+    // 짝수의 합
+    private int sumEven(int n) {
+
+        return n / 2 * (n + 2) / 2;
+    }
+
     public static void main(String[] args) {
 
         Day7 day7 = new Day7();
@@ -38,5 +44,10 @@ public class Day7 {
 
         System.out.printf("%,d%n", day7.bill(10, 3));
         System.out.printf("%,d%n", day7.bill(64, 6));
+
+        System.out.println("=================================================");
+
+        System.out.println(day7.sumEven(10));
+        System.out.println(day7.sumEven(4));
     }
 }
