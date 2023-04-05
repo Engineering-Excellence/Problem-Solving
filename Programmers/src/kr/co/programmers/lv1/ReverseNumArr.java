@@ -2,6 +2,7 @@ package kr.co.programmers.lv1;
 
 import java.util.Arrays;
 
+// 자연수 뒤집어 배열로 만들기
 public class ReverseNumArr {
 
     private int[] solution(long n) {
