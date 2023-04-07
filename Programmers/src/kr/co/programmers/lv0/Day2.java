@@ -30,7 +30,7 @@ class Day2 {
     }
 
     // 최대공약수(유클리드 호제법)
-    private int getGCD(int a, int b) {
+    public int getGCD(int a, int b) {
 
         if (b == 0) return a;
         return getGCD(b, a % b);
