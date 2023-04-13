@@ -3,7 +3,7 @@ package kr.co.programmers.lv1;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
-// K번째수
+// K번째 수
 public class KthNumber {
 
     private int[] solution(int[] array, int[][] commands) {
