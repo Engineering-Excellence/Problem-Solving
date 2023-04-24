@@ -1,5 +1,6 @@
-package net.acmicpc.bronze;
+package net.acmicpc.bronze.V;
 
+// Hello World
 public class Prob_2557_HelloWorld {
 
     public static void main(String[] args) {
