@@ -20,10 +20,6 @@ public class Prob_1026_Treasure {
         StringTokenizer st2 = new StringTokenizer(br.readLine());
         int[] B = IntStream.generate(() -> Integer.parseInt(st2.nextToken())).limit(N).sorted().toArray();
 
-        int S = 0;
-        for (int i = 0; i < N; i++) {
-            S += A[i] * B[N - 1 - i];
-        }
-        System.out.print(S);
+        System.out.println(IntStream.range(0, N).map(i -> A[i] * B[N - 1 - i]).sum());
     }
 }
