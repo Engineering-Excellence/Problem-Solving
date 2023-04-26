@@ -22,12 +22,9 @@ public class Prob_1697_HideAndSeek {
         int time = 0;
 
         while (!queue.isEmpty()) {
-            int size = queue.size();
-            for (int i = 0; i < size; i++) {
+            for (int q = 0; q < queue.size(); q++) {
                 int node = queue.poll();
-                if (node == k) {
-                    return time;
-                }
+                if (node == k) return time;
                 if (node - 1 >= 0 && !visited[node - 1]) {
                     queue.offer(node - 1);
                     visited[node - 1] = true;
