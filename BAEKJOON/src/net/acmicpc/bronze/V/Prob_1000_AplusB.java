@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+// A+B
 public class Prob_1000_AplusB {
 
     public static void main(String[] args) throws IOException {

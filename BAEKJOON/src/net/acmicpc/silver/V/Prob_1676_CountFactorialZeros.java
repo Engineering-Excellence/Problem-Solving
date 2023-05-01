@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 // 팩토리얼 0의 개수
-public class Prob_1676_FactorialNumZero {
+public class Prob_1676_CountFactorialZeros {
 
     public static void main(String[] args) throws IOException {
 
