@@ -12,12 +12,16 @@ public class Prob_1676_FactorialNumZero {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         int cnt = 0;
-        for (int i = 1; i <= N; i++) {
+        /*for (int i = 5; i <= N; i++) {
             int n = i;
             while (n % 5 == 0) {
                 n /= 5;
                 cnt++;
             }
+        }*/
+        while (N >= 5) {
+            cnt += N / 5;
+            N /= 5;
         }
         System.out.println(cnt);
     }
