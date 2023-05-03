@@ -19,12 +19,11 @@ public class Prob_10845_Queue {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         StringBuilder sb = new StringBuilder();
-        int num = 0;
 
         for (int i = 0; i < N; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             String method = st.nextToken();
-            if (st.hasMoreTokens()) num = Integer.parseInt(st.nextToken());
+            /*
             switch (method) {
                 case "push": push(num); break;
                 case "pop": sb.append(pop()).append("\n"); break;
@@ -34,22 +33,27 @@ public class Prob_10845_Queue {
                 case "back": sb.append(back()).append("\n"); break;
                 default: break;
             }
+            */
+            switch (method) {
+                case "push" -> push(Integer.parseInt(st.nextToken()));
+                case "pop" -> sb.append(pop()).append("\n");
+                case "size" -> sb.append(size()).append("\n");
+                case "empty" -> sb.append(empty()).append("\n");
+                case "front" -> sb.append(front()).append("\n");
+                case "back" -> sb.append(back()).append("\n");
+                default -> { }
+            }
         }
         System.out.print(sb);
     }
 
-    static void push(int num) {
-        queue.add(num);
+    static void push(int n) {
         rear++;
+        queue.add(n);
     }
 
     static int pop() {
-        int res = -1;
-        if (front <= rear) {
-            res = queue.get(front);
-            front++;
-        }
-        return res;
+        return front <= rear ? queue.get(front++) : -1;
     }
 
     static int size() {
