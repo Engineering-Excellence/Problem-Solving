@@ -14,7 +14,7 @@ public class Prob_2164_Card2 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
 
-//        Queue<Integer> queue = new LinkedList<>(IntStream.iterate(1, i -> i + 1).limit(N).boxed().toList());
+//        Queue<Integer> queue = new LinkedList<>(IntStream.iterate(1, i -> i + 1).limit(N).boxed().toList());  // JDK 16↑
         Queue<Integer> queue = new LinkedList<>();
         for (int i = 1; i <= N; i++) {
             queue.offer(i);
