@@ -10,10 +10,10 @@ public class Prob_2438_StarPrint_1 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int size = Integer.parseInt(br.readLine());
+        int N = Integer.parseInt(br.readLine());
         StringBuilder ans = new StringBuilder();
 
-        for (int i = 1; i <= size; i++) {
+        for (int i = 1; i <= N; i++) {
             ans.append("*".repeat(i)).append("\n");
         }
         System.out.print(ans);
