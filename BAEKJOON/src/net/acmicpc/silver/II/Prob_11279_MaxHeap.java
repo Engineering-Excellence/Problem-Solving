@@ -57,8 +57,8 @@ public class Prob_11279_MaxHeap {
 
         for (int i = 0; i < N; i++) {
             int n = Integer.parseInt(br.readLine());
-            if (n > 0) offer(n);
-            else ans.append(poll()).append("\n");
+            if (n == 0) ans.append(poll()).append("\n");
+            else offer(n);
         }
         System.out.print(ans);
     }
