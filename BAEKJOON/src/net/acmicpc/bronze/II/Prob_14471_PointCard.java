@@ -16,18 +16,18 @@ public class Prob_14471_PointCard {
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
         int[] costs = new int[m];
-        int ans = 0;
+        int sum = 0;
 
         for (int card = 0; card < m; card++) {
             st = new StringTokenizer(br.readLine());
             int stamp = Integer.parseInt(st.nextToken());
-            if (stamp < n) costs[card] = n - stamp;
+            if (stamp < n) {
+                costs[card] = n - stamp;
+                sum += costs[card];
+            }
         }
         Arrays.sort(costs);
 
-        for (int card = 0; card < m - 1; card++) {
-            ans += costs[card];
-        }
-        System.out.print(ans);
+        System.out.print(sum - costs[m - 1]);
     }
 }
