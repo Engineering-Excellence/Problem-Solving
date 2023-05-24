@@ -15,10 +15,7 @@ public class Prob_28061_PickLemon {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int max = 0;
         for (int i = 0; i < n; i++) {
-            int temp = Integer.parseInt(st.nextToken()) - (n - i);
-            if (max < temp) {
-                max = temp;
-            }
+            max = Math.max(max, Integer.parseInt(st.nextToken()) - (n - i));
         }
         System.out.print(max);
     }
