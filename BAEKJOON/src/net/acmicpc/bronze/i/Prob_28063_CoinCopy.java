@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 // 동전 복사
 public class Prob_28063_CoinCopy {
 
-    static int solution(int N, int x, int y) {
+    private static int solution(int N, int x, int y) {
 
         if (N == 1) {
             return 0;

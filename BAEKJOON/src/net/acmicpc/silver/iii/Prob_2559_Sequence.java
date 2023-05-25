@@ -15,18 +15,18 @@ public class Prob_2559_Sequence {
         final int N = Integer.parseInt(st.nextToken());
         final int K = Integer.parseInt(st.nextToken());
 
-        long[] celsius = new long[N];
+        int[] celsius = new int[N];
         st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N; i++) {
             celsius[i] = Integer.parseInt(st.nextToken());
         }
 
-        long sum = 0;
+        int sum = 0;
         for (int i = 0; i < K; i++) {
             sum += celsius[i];
         }
 
-        long max = sum;
+        int max = sum;
         for (int i = K; i < N; i++) {
             sum += celsius[i];
             sum -= celsius[i - K];
