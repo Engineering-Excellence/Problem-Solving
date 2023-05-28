@@ -43,7 +43,7 @@ class Graph {
             }
 
             for (int next : graph.get(currVertex)) {
-                int newDistance = distance[currVertex] + 1;
+                int newDistance = distance[currVertex] + 1; // 모든 도로의 거리는 1
 
                 if (newDistance < distance[next]) {
                     distance[next] = newDistance;   // 더 짧은 거리가 발견되면 최단거리 갱신
