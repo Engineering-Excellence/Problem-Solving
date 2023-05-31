@@ -16,13 +16,7 @@ public class BOJ_1181_WordSort {
             words[i] = br.readLine();
         }
         br.close();
-        Arrays.sort(words, (o1, o2) -> {
-            if (o1.length() == o2.length()) {
-                return o1.compareTo(o2);    // 사전순으로 정렬
-            } else {
-                return o1.length() - o2.length();   // 길이순으로 정렬
-            }
-        });
+        Arrays.sort(words, (o1, o2) -> o1.length() == o2.length() ? o1.compareTo(o2) : o1.length() - o2.length());
         for (int i = 0; i < N; i++) {
             if (i > 0 && words[i].equals(words[i - 1])) {
                 continue;   // 중복된 단어는 스킵
