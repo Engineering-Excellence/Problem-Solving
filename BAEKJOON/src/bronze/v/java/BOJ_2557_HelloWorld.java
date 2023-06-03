@@ -1,4 +1,4 @@
-package bronze.v;
+package bronze.v.java;
 
 // Hello World
 public class BOJ_2557_HelloWorld {

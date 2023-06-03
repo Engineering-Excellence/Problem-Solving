@@ -1,4 +1,4 @@
-package bronze.i;
+package bronze.i.java;
 
 import java.io.*;
 import java.util.Arrays;
