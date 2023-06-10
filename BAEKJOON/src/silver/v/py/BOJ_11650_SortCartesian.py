@@ -14,7 +14,7 @@
 import sys
 
 n = int(sys.stdin.readline())
-cartesian = [sys.stdin.readline().rstrip() for _ in range(n)]
+cartesian = [sys.stdin.readline() for _ in range(n)]
 cartesian.sort(key=lambda c: int(c.split()[1]))
 cartesian.sort(key=lambda c: int(c.split()[0]))
 print("".join(cartesian))
