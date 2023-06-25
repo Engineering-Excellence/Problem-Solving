@@ -10,7 +10,7 @@ public class BOJ_1018_RepaintChessboard {
 
     private static int count(char[][] board, int x, int y) {
 
-        int cnt = 0;
+        int cnt = 0;    // 현재 체스판 영역에서 잘못 칠해진 칸의 개수
         for (int i = x; i < x + 8; i++) {
             for (int j = y; j < y + 8; j++) {
                 if ((i + j) % 2 == 0) {
@@ -24,7 +24,7 @@ public class BOJ_1018_RepaintChessboard {
                 }
             }
         }
-        return Math.min(cnt, 64 - cnt);
+        return Math.min(cnt, 64 - cnt); // 정답 체스판에서 잘못 칠해진 칸의 개수와 비교
     }
 
     public static void main(String[] args) throws IOException {
@@ -46,6 +46,6 @@ public class BOJ_1018_RepaintChessboard {
                 min = Math.min(min, count(board, i, j));
             }
         }
-        System.out.println(min);
+        System.out.print(min);
     }
 }
