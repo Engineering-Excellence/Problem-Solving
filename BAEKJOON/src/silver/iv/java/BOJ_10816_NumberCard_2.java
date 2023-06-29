@@ -19,8 +19,7 @@ public class BOJ_10816_NumberCard_2 {
         StringTokenizer st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N; i++) {
             int card = Integer.parseInt(st.nextToken());
-            if (cards.containsKey(card)) cards.compute(card, (k, v) -> v + 1);
-            else cards.put(card, 1);
+            cards.put(card, cards.getOrDefault(card, 0) + 1);
         }
         final int M = Integer.parseInt(br.readLine());
         st = new StringTokenizer(br.readLine());
