@@ -1,11 +1,11 @@
-package bronze.iv.java;
+package bronze.v.java;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-// 별 찍기 - 2
-public class BOJ_2439_StarPrint_2 {
+// 별 찍기 - 1
+public class BOJ_2438_PrintStar_1 {
 
     public static void main(String[] args) throws IOException {
 
@@ -14,7 +14,7 @@ public class BOJ_2439_StarPrint_2 {
         StringBuilder ans = new StringBuilder();
 
         for (int i = 1; i <= N; i++) {
-            ans.append(" ".repeat(N - i)).append("*".repeat(i)).append("\n");
+            ans.append("*".repeat(i)).append("\n");
         }
         System.out.print(ans);
     }
