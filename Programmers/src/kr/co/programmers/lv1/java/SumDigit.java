@@ -1,4 +1,4 @@
-package kr.co.programmers.lv1;
+package kr.co.programmers.lv1.java;
 
 public class SumDigit {
 

@@ -1,4 +1,4 @@
-package kr.co.programmers.lv1;
+package kr.co.programmers.lv1.java;
 
 // 정수 내림차순으로 배치하기
 public class IntDesc {

@@ -1,4 +1,4 @@
-package kr.co.programmers.lv1;
+package kr.co.programmers.lv1.java;
 
 // 약수의 개수와 덧셈
 public class NumDivisor {

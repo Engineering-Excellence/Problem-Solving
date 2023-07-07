@@ -1,4 +1,4 @@
-package kr.co.programmers.lv0;
+package kr.co.programmers.lv0.java;
 
 import java.util.*;
 

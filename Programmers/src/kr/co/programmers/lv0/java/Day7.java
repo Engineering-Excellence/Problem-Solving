@@ -1,4 +1,4 @@
-package kr.co.programmers.lv0;
+package kr.co.programmers.lv0.java;
 
 // 문자열, 조건문, 수학, 반복문
 public class Day7 {
@@ -19,6 +19,21 @@ public class Day7 {
         String answer = "";
         answer = my_string.replace(letter, "");
         return answer;
+    }
+
+    // 각도기
+    private int protractor(int angle) {
+
+        /*
+            int answer;
+            if (angle > 0 && angle < 90) answer = 1;
+            else if (angle == 90) answer = 2;
+            else if (angle > 90 && angle < 180) answer = 3;
+            else answer = 4;
+            return answer;
+        */
+
+        return angle == 180 ? 4 : angle < 90 ? 1 : angle == 90 ? 2 : angle > 90 ? 3 : 0;
     }
 
     // 양꼬치
@@ -49,5 +64,11 @@ public class Day7 {
 
         System.out.println(day7.sumEven(10));
         System.out.println(day7.sumEven(4));
+
+        System.out.println("=================================================");
+
+        System.out.println(day7.protractor(70));
+        System.out.println(day7.protractor(91));
+        System.out.println(day7.protractor(180));
     }
 }

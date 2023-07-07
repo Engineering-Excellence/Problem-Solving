@@ -1,4 +1,4 @@
-package kr.co.programmers.lv1;
+package kr.co.programmers.lv1.java;
 
 /*
     나머지가 1이 되는 수 찾기

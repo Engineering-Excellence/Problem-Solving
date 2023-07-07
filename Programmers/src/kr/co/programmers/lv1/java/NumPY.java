@@ -1,4 +1,4 @@
-package kr.co.programmers.lv1;
+package kr.co.programmers.lv1.java;
 
 // 문자열 내 p와 y의 개수
 public class NumPY {

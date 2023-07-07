@@ -1,4 +1,4 @@
-package kr.co.programmers.lv1;
+package kr.co.programmers.lv1.java;
 
 // 핸드폰 번호 가리기
 public class mobileNum {

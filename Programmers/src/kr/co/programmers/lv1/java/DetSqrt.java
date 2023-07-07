@@ -1,4 +1,4 @@
-package kr.co.programmers.lv1;
+package kr.co.programmers.lv1.java;
 
 // 정수 제곱근 판별
 public class DetSqrt {
