@@ -1,4 +1,4 @@
-package kr.co.programmers.lv0.java;
+package kr.co.programmers.introduction.java;
 
 import java.util.Arrays;
 import java.util.Random;

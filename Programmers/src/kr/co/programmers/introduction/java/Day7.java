@@ -1,4 +1,4 @@
-package kr.co.programmers.lv0.java;
+package kr.co.programmers.introduction.java;
 
 // 문자열, 조건문, 수학, 반복문
 public class Day7 {

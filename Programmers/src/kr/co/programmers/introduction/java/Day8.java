@@ -1,12 +1,17 @@
-package kr.co.programmers.lv0.java;
+package kr.co.programmers.introduction.java;
 
 import java.util.Arrays;
 
 // 배열, 구현, 수학
 public class Day8 {
 
+    // 배열 자르기
+    private int[] sliceArray(int[] numbers, int num1, int num2) {
+        return Arrays.copyOfRange(numbers, num1, num2 + 1);
+    }
+
     // 진료순서 정하기
-    public int[] emergencyCare(int[] emergency) {
+    private int[] emergencyCare(int[] emergency) {
 
         int[] answers = new int[emergency.length];
 
@@ -36,5 +41,10 @@ public class Day8 {
         System.out.println(Arrays.toString(day8.emergencyCare(new int[]{3, 76, 24})));
         System.out.println(Arrays.toString(day8.emergencyCare(new int[]{1, 2, 3, 4, 5, 6, 7})));
         System.out.println(Arrays.toString(day8.emergencyCare(new int[]{30, 10, 23, 6, 100})));
+
+        System.out.println("=".repeat(60));
+
+        System.out.println(Arrays.toString(day8.sliceArray(new int[]{1, 2, 3, 4, 5}, 1, 3)));
+        System.out.println(Arrays.toString(day8.sliceArray(new int[]{1, 3, 5}, 1, 2)));
     }
 }

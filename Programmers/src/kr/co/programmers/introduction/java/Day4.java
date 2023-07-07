@@ -1,4 +1,4 @@
-package kr.co.programmers.lv0.java;
+package kr.co.programmers.introduction.java;
 
 // 수학, 배열
 public class Day4 {
