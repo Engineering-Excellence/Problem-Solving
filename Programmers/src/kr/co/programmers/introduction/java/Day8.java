@@ -2,6 +2,7 @@ package kr.co.programmers.introduction.java;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 // 배열, 구현, 수학
 public class Day8 {
@@ -47,6 +48,20 @@ public class Day8 {
         return answers;
     }
 
+    // 순서쌍의 개수
+    private int orderedPair(int n) {
+
+        /*
+            int cnt = 0;
+            for (int i = 1; i <= n / 2; i++) {
+                if (n % i == 0) cnt++;
+            }
+            return ++cnt;
+        */
+
+        return (int) IntStream.rangeClosed(1, n / 2).filter(i -> n % i == 0).count() + 1;
+    }
+
     public static void main(String[] args) {
 
         Day8 day8 = new Day8();
@@ -65,5 +80,10 @@ public class Day8 {
         System.out.println(day8.age(23));
         System.out.println(day8.age(51));
         System.out.println(day8.age(100));
+
+        System.out.println("=".repeat(60));
+
+        System.out.println(day8.orderedPair(20));
+        System.out.println(day8.orderedPair(100));
     }
 }
