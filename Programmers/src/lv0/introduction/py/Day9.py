@@ -8,9 +8,23 @@ class Day9:
             cnt += q
         return cnt
 
+    # 모스 부호 (1)
+    def morse_code(self, letter):
+        morse = {
+            '.-': 'a', '-...': 'b', '-.-.': 'c', '-..': 'd', '.': 'e', '..-.': 'f',
+            '--.': 'g', '....': 'h', '..': 'i', '.---': 'j', '-.-': 'k', '.-..': 'l',
+            '--': 'm', '-.': 'n', '---': 'o', '.--.': 'p', '--.-': 'q', '.-.': 'r',
+            '...': 's', '-': 't', '..-': 'u', '...-': 'v', '.--': 'w', '-..-': 'x',
+            '-.--': 'y', '--..': 'z'
+        }
+        return ''.join([morse[i] for i in letter.split()])
+
 
 if __name__ == '__main__':
     day9 = Day9()
     print(day9.ant_corps(23))
     print(day9.ant_corps(24))
     print(day9.ant_corps(999))
+    print('=' * 80)
+    print(day9.morse_code(".... . .-.. .-.. ---"))
+    print(day9.morse_code(".--. -.-- - .... --- -."))
