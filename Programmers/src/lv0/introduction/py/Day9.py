@@ -1,4 +1,5 @@
 # 수학, 문자열, 해시, 완전탐색, 조건문
+
 class Day9:
     # 개미 군단
     def ant_corps(self, hp):
@@ -8,7 +9,7 @@ class Day9:
             cnt += q
         return cnt
 
-    # 모스 부호 (1)
+    # 모스부호 (1)
     def morse_code(self, letter):
         morse = {
             '.-': 'a', '-...': 'b', '-.-.': 'c', '-..': 'd', '.': 'e', '..-.': 'f',
@@ -28,3 +29,4 @@ if __name__ == '__main__':
     print('=' * 80)
     print(day9.morse_code(".... . .-.. .-.. ---"))
     print(day9.morse_code(".--. -.-- - .... --- -."))
+    print('=' * 80)
