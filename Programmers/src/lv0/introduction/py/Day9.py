@@ -20,6 +20,10 @@ class Day9:
         }
         return ''.join([morse[i] for i in letter.split()])
 
+    # 가위 바위 보
+    def rock_scissors_paper(self, rsp):
+        return rsp.translate(str.maketrans('025', '502'))
+
 
 if __name__ == '__main__':
     day9 = Day9()
@@ -30,3 +34,5 @@ if __name__ == '__main__':
     print(day9.morse_code(".... . .-.. .-.. ---"))
     print(day9.morse_code(".--. -.-- - .... --- -."))
     print('=' * 80)
+    print(day9.rock_scissors_paper("2"))
+    print(day9.rock_scissors_paper("2050"))
