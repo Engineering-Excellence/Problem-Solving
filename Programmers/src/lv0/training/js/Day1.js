@@ -32,10 +32,16 @@ class Day1 {
     changeCase() {
         rl.on('line', line => console.log(line.replace(/\w/g, c => c.toUpperCase() === c ? c.toLowerCase() : c.toUpperCase())))
     }
+
+    // 특수문자 출력하기
+    printSpecial() {
+        console.log('!@#$%^&*(\\\'"<>?:;')
+    }
 }
 
 const day1 = new Day1()
-// day1.printStr()
-// day1.printSplit()
-// day1.printRepeat()
+day1.printStr()
+day1.printSplit()
+day1.printRepeat()
 day1.changeCase()
+day1.printSpecial()
