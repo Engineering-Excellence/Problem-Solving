@@ -27,9 +27,15 @@ class Day1 {
             console.log(values[0].repeat(values[1]))
         })
     }
+
+    // 대소문자 바꿔서 출력하기
+    changeCase() {
+        rl.on('line', line => console.log(line.replace(/\w/g, c => c.toUpperCase() === c ? c.toLowerCase() : c.toUpperCase())))
+    }
 }
 
 const day1 = new Day1()
-day1.printStr()
-day1.printSplit()
-day1.printRepeat()
+// day1.printStr()
+// day1.printSplit()
+// day1.printRepeat()
+day1.changeCase()
