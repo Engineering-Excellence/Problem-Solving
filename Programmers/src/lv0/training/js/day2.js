@@ -36,6 +36,11 @@ class Day2 {
     evenOdd() {
         rl.on('line', line => console.log(line, 'is', parseInt(line) % 2 ? 'odd' : 'even'))
     }
+
+    // 문자열 겹쳐쓰기
+    overwriteStr(my_string, overwrite_string, s) {
+        return my_string.slice(0, s) + overwrite_string + my_string.slice(s + overwrite_string.length)
+    }
 }
 
 const day2 = new Day2()
@@ -43,3 +48,5 @@ day2.printAdd()
 day2.concatStr()
 day2.rotateStr()
 day2.evenOdd()
+console.log(day2.overwriteStr('He11oWor1d', 'lloWorl', 2))
+console.log(day2.overwriteStr('Program29b8UYP', 'merS123', 7))
