@@ -25,8 +25,15 @@ class Day2 {
             console.log(strs.join(''))
         })
     }
+
+    // 문자열 돌리기
+    rotateStr() {
+        // 전개 연산자 '...': 명시적으로 할당되지 않은 나머지 배열 값
+        rl.on('line', line => [...line].forEach(c => console.log(c)))
+    }
 }
 
 const day2 = new Day2()
 day2.printAdd()
 day2.concatStr()
+day2.rotateStr()
