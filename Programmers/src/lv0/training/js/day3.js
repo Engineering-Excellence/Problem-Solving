@@ -6,7 +6,7 @@ class Day3 {
     shuffleStr(str1, str2) {
         let str = ''
         for (let i = 0; i < str1.length; i++) {
-            str.concat(str1[i] + str2[i])
+            str += str1[i] + str2[i]
         }
         return str
     }
@@ -15,8 +15,14 @@ class Day3 {
     arrToStr(arr) {
         return arr.join('')
     }
+
+    // 문자열 곱하기
+    repeatStr(my_string, k) {
+        return my_string.repeat(k)
+    }
 }
 
 const day3 = new Day3()
 console.log(day3.shuffleStr('abc', '123'))
 console.log(day3.arrToStr(['a', 'b', 'c']))
+console.log(day3.repeatStr('string', 3))
