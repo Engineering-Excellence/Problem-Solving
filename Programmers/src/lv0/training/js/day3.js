@@ -6,7 +6,7 @@ class Day3 {
     shuffleStr(str1, str2) {
         let str = ''
         for (let i = 0; i < str1.length; i++) {
-            str += str1[i] + str2[i]
+            str = str.concat(str1[i], str2[i])
         }
         return str
     }
@@ -20,9 +20,15 @@ class Day3 {
     repeatStr(my_string, k) {
         return my_string.repeat(k)
     }
+
+    // 더 크게 합치기
+    greaterSum(a, b) {
+        return Math.max(Number(`${a}${b}`), Number(`${b}${a}`))
+    }
 }
 
 const day3 = new Day3()
 console.log(day3.shuffleStr('abc', '123'))
 console.log(day3.arrToStr(['a', 'b', 'c']))
 console.log(day3.repeatStr('string', 3))
+console.log(day3.greaterSum(91, 9))
