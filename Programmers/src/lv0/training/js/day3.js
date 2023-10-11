@@ -25,6 +25,11 @@ class Day3 {
     greaterSum(a, b) {
         return Math.max(Number(`${a}${b}`), Number(`${b}${a}`))
     }
+
+    // 두 수의 연산값 비교하기
+    greaterOne(a, b) {
+        return Math.max(Number(`${a}${b}`), 2 * a * b)
+    }
 }
 
 const day3 = new Day3()
@@ -32,3 +37,4 @@ console.log(day3.shuffleStr('abc', '123'))
 console.log(day3.arrToStr(['a', 'b', 'c']))
 console.log(day3.repeatStr('string', 3))
 console.log(day3.greaterSum(91, 9))
+console.log(day3.greaterOne(2, 91))
