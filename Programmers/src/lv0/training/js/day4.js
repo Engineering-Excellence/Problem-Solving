@@ -21,6 +21,21 @@ class Day4 {
     condStr(ineq, eq, n, m) {
         return eval(`${n} ${ineq}${eq} ${m}`.replace('!', '')) ? 1 : 0
     }
+    /*
+        import javax.script.ScriptEngineManager;
+        import javax.script.ScriptException;
+
+        class Day4 {
+            public int condStr(String ineq, String eq, int n, int m) throws ScriptException {
+                return (boolean) new ScriptEngineManager().getEngineByName("JavaScript").eval((n + ineq + eq + m).replace("!", "")) ? 1 : 0;
+            }
+        }
+    */
+
+    // flag에 따라 다른 값 반환하기
+    fnFlag(a, b, flag) {
+        return flag ? a + b : a - b
+    }
 }
 
 const day4 = new Day4()
@@ -32,3 +47,5 @@ console.log(day4.evenOdd(7))
 console.log(day4.evenOdd(10))
 console.log(day4.condStr('<', '=', 20, 50))
 console.log(day4.condStr('>', '!', 41, 78))
+console.log(day4.fnFlag(-4, 7, true))
+console.log(day4.fnFlag(-4, 7, false))
