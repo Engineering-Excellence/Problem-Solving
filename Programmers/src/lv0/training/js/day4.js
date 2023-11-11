@@ -14,7 +14,12 @@ class Day4 {
 
     // 홀짝에 따라 다른 값 반환하기
     evenOdd(n) {
-        return n % 2 == 0 ? n * (n + 1) * (n + 2) / 6 : Math.pow(Math.ceil(n / 2), 2);
+        return n % 2 == 0 ? n * (n + 1) * (n + 2) / 6 : Math.pow(Math.ceil(n / 2), 2)
+    }
+
+    // 조건 문자열
+    condStr(ineq, eq, n, m) {
+        return eval(`${n} ${ineq}${eq} ${m}`.replace('!', '')) ? 1 : 0
     }
 }
 
@@ -25,3 +30,5 @@ console.log(day4.commonMultiple(60, 2, 3))
 console.log(day4.commonMultiple(55, 10, 5))
 console.log(day4.evenOdd(7))
 console.log(day4.evenOdd(10))
+console.log(day4.condStr('<', '=', 20, 50))
+console.log(day4.condStr('>', '!', 41, 78))
