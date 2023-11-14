@@ -32,9 +32,16 @@ class Day5 {
         const n = new Set([a, b, c]).size
         let res = 1
         for (let i = 1; i <= 4 - n; i++) {
-            res *= Math.pow(a, i) + Math.pow(b, i) + Math.pow(c, i)
+            res *= a ** i + b ** i + c ** i
         }
         return res
+    }
+
+    // 원소들의 곱과 합
+    multiplyAndSum(num_list) {
+        let mul = num_list.reduce((a, c) => a * c, 1)
+        let sum = num_list.reduce((a, c) => a + c, 0)
+        return mul < sum ** 2 ? 1 : 0
     }
 }
 
@@ -46,3 +53,5 @@ console.log(Day5.prototype.addArithmeticSequence(7, 1, [false, false, false, tru
 console.log(Day5.prototype.diceGame2(2, 6, 1))
 console.log(Day5.prototype.diceGame2(5, 3, 3))
 console.log(Day5.prototype.diceGame2(4, 4, 4))
+console.log(Day5.prototype.multiplyAndSum([3, 4, 5, 2, 1]))
+console.log(Day5.prototype.multiplyAndSum([5, 7, 8, 3]))
