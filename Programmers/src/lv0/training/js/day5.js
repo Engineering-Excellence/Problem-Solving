@@ -26,6 +26,16 @@ class Day5 {
         }
         return sum
     }
+
+    // 주사위 게임 2
+    diceGame2(a, b, c) {
+        const n = new Set([a, b, c]).size
+        let res = 1
+        for (let i = 1; i <= 4 - n; i++) {
+            res *= Math.pow(a, i) + Math.pow(b, i) + Math.pow(c, i)
+        }
+        return res
+    }
 }
 
 module.exports = Day5
@@ -33,3 +43,6 @@ console.log(Day5.prototype.process('abc1abc1abc'))
 console.log(Day5.prototype.process(''))
 console.log(Day5.prototype.addArithmeticSequence(3, 4, [true, false, false, true, true]))
 console.log(Day5.prototype.addArithmeticSequence(7, 1, [false, false, false, true, false, false, false]))
+console.log(Day5.prototype.diceGame2(2, 6, 1))
+console.log(Day5.prototype.diceGame2(5, 3, 3))
+console.log(Day5.prototype.diceGame2(4, 4, 4))
