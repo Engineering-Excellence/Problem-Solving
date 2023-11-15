@@ -43,6 +43,14 @@ class Day5 {
         let sum = num_list.reduce((a, c) => a + c, 0)
         return mul < sum ** 2 ? 1 : 0
     }
+
+    // 이어 붙인 수
+    pasteNum(num_list) {
+        let even = ''
+        let odd = ''
+        num_list.forEach(n => n % 2 ? even += n.toString() : odd += n.toString())
+        return parseInt(even) + parseInt(odd)
+    }
 }
 
 module.exports = Day5
@@ -55,3 +63,5 @@ console.log(Day5.prototype.diceGame2(5, 3, 3))
 console.log(Day5.prototype.diceGame2(4, 4, 4))
 console.log(Day5.prototype.multiplyAndSum([3, 4, 5, 2, 1]))
 console.log(Day5.prototype.multiplyAndSum([5, 7, 8, 3]))
+console.log(Day5.prototype.pasteNum([3, 4, 5, 2, 1]))
+console.log(Day5.prototype.pasteNum([5, 7, 8, 3]))
