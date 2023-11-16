@@ -13,7 +13,7 @@ public class Day6 {
     }
 
     // 수 조작하기 1
-    private int manipulateNumber(int n, String control) {
+    private int manipulateNumber1(int n, String control) {
         return control.chars().reduce(n, (acc, c) -> {
             switch (c) {
                 case 'w' -> acc += 1;
@@ -26,10 +26,28 @@ public class Day6 {
         });
     }
 
+    // 수 조작하기 2
+    private String manipulateNumber2(int[] numLog) {
+        StringBuilder ans = new StringBuilder();
+        for (int i = 1; i < numLog.length; i++) {
+            String c;
+            switch (numLog[i] - numLog[i - 1]) {
+                case 1 -> c = "w";
+                case -1 -> c = "s";
+                case 10 -> c = "d";
+                case -10 -> c = "a";
+                default -> c = "";
+            }
+            ans.append(c);
+        }
+        return ans.toString();
+    }
+
     public static void main(String[] args) {
         Day6 day6 = new Day6();
         System.out.println(Arrays.toString(day6.finalTwoElements(new int[]{2, 1, 6})));
         System.out.println(Arrays.toString(day6.finalTwoElements(new int[]{5, 2, 1, 7, 5})));
-        System.out.println(day6.manipulateNumber(0, "wsdawsdassw"));
+        System.out.println(day6.manipulateNumber1(0, "wsdawsdassw"));
+        System.out.println(day6.manipulateNumber2(new int[]{0, 1, 0, 10, 0, 1, 0, 10, 0, -1, -2, -1}));
     }
 }
