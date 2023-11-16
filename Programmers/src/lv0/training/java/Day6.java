@@ -12,9 +12,24 @@ public class Day6 {
         return ans;
     }
 
+    // 수 조작하기 1
+    private int manipulateNumber(int n, String control) {
+        return control.chars().reduce(n, (acc, c) -> {
+            switch (c) {
+                case 'w' -> acc += 1;
+                case 's' -> acc += -1;
+                case 'd' -> acc += 10;
+                case 'a' -> acc += -10;
+                default -> throw new IllegalArgumentException("Wrong Input");
+            }
+            return acc;
+        });
+    }
+
     public static void main(String[] args) {
         Day6 day6 = new Day6();
         System.out.println(Arrays.toString(day6.finalTwoElements(new int[]{2, 1, 6})));
         System.out.println(Arrays.toString(day6.finalTwoElements(new int[]{5, 2, 1, 7, 5})));
+        System.out.println(day6.manipulateNumber(0, "wsdawsdassw"));
     }
 }
