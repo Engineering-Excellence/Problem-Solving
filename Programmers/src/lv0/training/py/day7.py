@@ -12,6 +12,12 @@ class Day7:
         return arr
 
 
+    # 카운트 업
+    def count_up(self, start_num, end_num):
+        return list(range(start_num, end_num + 1))
+
+
 if __name__ == '__main__':
     day7 = Day7()
     print(day7.sequence_and_query_4([0, 1, 2, 4, 3], [[0, 4, 1], [0, 3, 2], [0, 3, 3]]))
+    print(day7.count_up(3, 10))
