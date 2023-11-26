@@ -35,6 +35,16 @@ class Day7:
                 ans.append(i)
         return ans if ans else [-1]
 
+    # 배열 만들기 4
+    @staticmethod
+    def make_array_4(arr):
+        stk = []
+        for i in range(len(arr)):
+            while stk and stk[-1] >= arr[i]:
+                stk.pop()
+            stk.append(arr[i])
+        return stk
+
 
 if __name__ == '__main__':
     day7 = Day7()
@@ -43,3 +53,4 @@ if __name__ == '__main__':
     print(day7.collatz_sequence(10))
     print(day7.make_array_2(5, 555))
     print(day7.make_array_2(10, 20))
+    print(day7.make_array_4([1, 4, 2, 5, 3]))
