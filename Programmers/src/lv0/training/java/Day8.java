@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 // 조건문, 문자열
-public class Day8 {
+class Day8 {
 
     // 주사위 게임 3
     private int diceGame3(int a, int b, int c, int d) {

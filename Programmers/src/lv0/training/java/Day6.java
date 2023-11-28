@@ -3,7 +3,7 @@ package lv0.training.java;
 import java.util.Arrays;
 
 // 조건문, 반복문
-public class Day6 {
+class Day6 {
     // 마지막 두 원소
     private int[] finalTwoElements(int[] num_list) {
         int l = num_list.length;
