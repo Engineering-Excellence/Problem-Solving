@@ -49,12 +49,23 @@ class Day8 {
         return ans;
     }
 
+    // 9로 나눈 나머지
+    private int remainder9(String number) {
+        return number.chars().map(c -> c - '0').sum() % 9;
+    }
+
     public static void main(String[] args) {
         Day8 day8 = new Day8();
+
         System.out.println(day8.diceGame3(2, 2, 2, 2));
         System.out.println(day8.diceGame3(4, 1, 4, 4));
         System.out.println(day8.diceGame3(6, 3, 3, 6));
         System.out.println(day8.diceGame3(2, 5, 2, 6));
         System.out.println(day8.diceGame3(6, 4, 2, 5));
+
+        System.out.println("-".repeat(60));
+
+        System.out.println(day8.remainder9("123"));
+        System.out.println(day8.remainder9("78720646226947352489"));
     }
 }
