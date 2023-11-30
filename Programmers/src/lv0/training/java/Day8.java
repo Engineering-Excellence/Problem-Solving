@@ -54,6 +54,15 @@ class Day8 {
         return number.chars().map(c -> c - '0').sum() % 9;
     }
 
+    // 문자열 여러 번 뒤집기
+    private String reverseStr(String my_string, int[][] queries) {
+        StringBuilder ans = new StringBuilder(my_string);
+        for (int[] query : queries) {
+            ans.replace(query[0], query[1] + 1, new StringBuilder(ans.substring(query[0], query[1] + 1)).reverse().toString());
+        }
+        return ans.toString();
+    }
+
     public static void main(String[] args) {
         Day8 day8 = new Day8();
 
@@ -67,5 +76,9 @@ class Day8 {
 
         System.out.println(day8.remainder9("123"));
         System.out.println(day8.remainder9("78720646226947352489"));
+
+        System.out.println("-".repeat(60));
+
+        System.out.println(day8.reverseStr("rermgorpsam", new int[][]{{2, 3}, {0, 7}, {5, 9}, {6, 10}}));
     }
 }
