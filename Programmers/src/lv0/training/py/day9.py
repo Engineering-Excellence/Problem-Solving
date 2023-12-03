@@ -14,6 +14,10 @@ class Day9:
     def get_last_n_char(self, my_string, n):
         return my_string[-n:] if n <= len(my_string) else my_string[-len(my_string):]
 
+    # 접미사 배열
+    def get_suffix_array(self, my_string):
+        return sorted([my_string[i:] for i in range(len(my_string))])
+
 
 if __name__ == '__main__':
     day9 = Day9()
@@ -21,3 +25,5 @@ if __name__ == '__main__':
     print(day9.make_str(["progressive", "hamburger", "hammer", "ahocorasick"], [[0, 4], [1, 2], [3, 5], [7, 7]]))
     print(day9.get_last_n_char("ProgrammerS123", 11))
     print(day9.get_last_n_char("He110W0r1d", 5))
+    print(day9.get_suffix_array("banana"))
+    print(day9.get_suffix_array("programmers"))
