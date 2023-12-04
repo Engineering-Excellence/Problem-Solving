@@ -18,6 +18,10 @@ class Day9:
     def get_suffix_array(self, my_string):
         return sorted([my_string[i:] for i in range(len(my_string))])
 
+    # 접미사인지 확인하기
+    def is_suffix(self, my_string, is_suffix):
+        return int(my_string.endswith(is_suffix))
+
 
 if __name__ == '__main__':
     day9 = Day9()
@@ -27,3 +31,7 @@ if __name__ == '__main__':
     print(day9.get_last_n_char("He110W0r1d", 5))
     print(day9.get_suffix_array("banana"))
     print(day9.get_suffix_array("programmers"))
+    print(day9.is_suffix("banana", "ana"))
+    print(day9.is_suffix("banana", "nan"))
+    print(day9.is_suffix("banana", "wxyz"))
+    print(day9.is_suffix("banana", "abanana"))
