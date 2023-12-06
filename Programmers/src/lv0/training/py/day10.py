@@ -10,6 +10,12 @@ class Day10:
     def is_prefix(my_string, is_prefix):
         return int(my_string.startswith(is_prefix))
 
+    # 문자열 뒤집기
+    @staticmethod
+    def revers_string(my_string, s, e):
+        # return my_string.replace(my_string[s:e + 1], ''.join(reversed(my_string[s:e + 1])), 1)
+        return my_string.replace(my_string[s:e + 1], my_string[s:e + 1][::-1], 1)
+
 
 if __name__ == '__main__':
     day10 = Day10()
@@ -19,3 +25,5 @@ if __name__ == '__main__':
     print(day10.is_prefix("banana", "nan"))
     print(day10.is_prefix("banana", "abcd"))
     print(day10.is_prefix("banana", "bananan"))
+    print(day10.revers_string("Progra21Sremm3", 6, 12))
+    print(day10.revers_string("Stanley1yelnatS", 4, 10))
