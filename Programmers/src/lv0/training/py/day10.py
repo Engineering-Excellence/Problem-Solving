@@ -13,8 +13,12 @@ class Day10:
     # 문자열 뒤집기
     @staticmethod
     def revers_string(my_string, s, e):
-        # return my_string.replace(my_string[s:e + 1], ''.join(reversed(my_string[s:e + 1])), 1)
         return my_string.replace(my_string[s:e + 1], my_string[s:e + 1][::-1], 1)
+
+    # 세로 읽기
+    @staticmethod
+    def vertical_read(my_string, m, c):
+        return my_string[c - 1::m]
 
 
 if __name__ == '__main__':
@@ -27,3 +31,5 @@ if __name__ == '__main__':
     print(day10.is_prefix("banana", "bananan"))
     print(day10.revers_string("Progra21Sremm3", 6, 12))
     print(day10.revers_string("Stanley1yelnatS", 4, 10))
+    print(day10.vertical_read("ihrhbakrfpndopljhygc", 4, 2))
+    print(day10.vertical_read("programmers", 1, 1))
