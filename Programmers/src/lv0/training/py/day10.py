@@ -20,6 +20,12 @@ class Day10:
     def vertical_read(my_string, m, c):
         return my_string[c - 1::m]
 
+    # qr code
+    @staticmethod
+    def qr_code(q, r, code):
+        # return ''.join([code[i] for i in filter(lambda x: x % q == r, range(len(code)))])
+        return code[r::q]
+
 
 if __name__ == '__main__':
     day10 = Day10()
@@ -33,3 +39,5 @@ if __name__ == '__main__':
     print(day10.revers_string("Stanley1yelnatS", 4, 10))
     print(day10.vertical_read("ihrhbakrfpndopljhygc", 4, 2))
     print(day10.vertical_read("programmers", 1, 1))
+    print(day10.qr_code(3, 1, "qjnwezgrpirldywt"))
+    print(day10.qr_code(1, 0, "programmers"))
