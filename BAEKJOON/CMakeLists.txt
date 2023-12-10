@@ -3,6 +3,4 @@ set(CMAKE_CXX_STANDARD 14)
 
 project(BAEKJOON)
 
-add_executable(BAEKJOON
-        src/bronze/v/c/BOJ_2557_HelloWorld.c
-)
+add_executable(boj_2557_helloWorld src/bronze/v/c/boj_2557_helloWorld.c)
