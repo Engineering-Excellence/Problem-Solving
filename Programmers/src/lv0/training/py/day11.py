@@ -27,6 +27,15 @@ class Day11:
     def count_down(start_num, end_num):
         return list(range(start_num, end_num - 1, -1))
 
+    # 가까운 1 찾기
+    @staticmethod
+    def find_near_one(arr, idx):
+        try:
+            ans = arr.index(1, idx)
+        except ValueError:
+            ans = -1
+        return ans
+
 
 if __name__ == '__main__':
     day11 = Day11()
@@ -35,3 +44,6 @@ if __name__ == '__main__':
     print(day11.make_array_1(15, 5))
     print(day11.erase_char('apporoograpemmemprs', [1, 16, 6, 15, 0, 10, 11, 3]))
     print(day11.count_down(10, 3))
+    print(day11.find_near_one([0, 0, 0, 1], 1))
+    print(day11.find_near_one([1, 0, 0, 1, 0, 0], 4))
+    print(day11.find_near_one([1, 1, 1, 1, 0], 3))
