@@ -21,6 +21,11 @@ class Day12:
                 return i
         return -1
 
+    # 배열 만들기 3
+    @staticmethod
+    def make_array_3(arr, intervals):
+        return arr[intervals[0][0]:intervals[0][1] + 1] + arr[intervals[1][0]:intervals[1][1] + 1]
+
 
 if __name__ == '__main__':
     da12 = Day12()
@@ -28,3 +33,4 @@ if __name__ == '__main__':
     print(da12.slice_list(4, [1, 5, 2], [1, 2, 3, 4, 5, 6, 7, 8, 9]))
     print(da12.first_negative([12, 4, 15, 46, 38, -2, 15]))
     print(da12.first_negative([13, 22, 53, 24, 15, 6]))
+    print(da12.make_array_3([1, 2, 3, 4, 5], [[1, 3], [0, 4]]))
