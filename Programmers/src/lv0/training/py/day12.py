@@ -36,6 +36,16 @@ class Day12:
             return [-1]
         return arr[arr.index(2): len(arr) - arr[::-1].index(2)]
 
+    # 배열 조각하기
+    @staticmethod
+    def sculpture_array(arr, query):
+        for i, q in enumerate(query):
+            if i % 2:
+                arr = arr[q:]
+            else:
+                arr = arr[:q + 1]
+        return arr
+
 
 if __name__ == '__main__':
     day12 = Day12()
@@ -48,3 +58,4 @@ if __name__ == '__main__':
     print(day12.domain_of_two([1, 2, 1]))
     print(day12.domain_of_two([1, 1, 1]))
     print(day12.domain_of_two([1, 2, 1, 2, 1, 10, 2, 1]))
+    print(day12.sculpture_array([0, 1, 2, 3, 4, 5], [4, 1, 2]))
