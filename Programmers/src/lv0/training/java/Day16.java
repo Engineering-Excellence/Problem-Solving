@@ -19,10 +19,23 @@ public class Day16 {
         return myString.toUpperCase();
     }
 
+    /**
+     * solution2 소문자로 바꾸기
+     *
+     * @param myString 알파벳으로 이루어진 문자열
+     * @return myString을 소문자로 변환하여 반환
+     */
+    private String solution2(String myString) {
+        return myString.toLowerCase();
+    }
+
     public static void main(String[] args) {
         Day16 day16 = new Day16();
 
         System.out.println(day16.solution1("aBcDeFg"));
         System.out.println(day16.solution1("AAA"));
+
+        System.out.println(day16.solution2("aBcDeFg"));
+        System.out.println(day16.solution2("aaa"));
     }
 }
