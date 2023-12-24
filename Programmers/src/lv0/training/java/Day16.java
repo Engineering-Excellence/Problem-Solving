@@ -1,5 +1,8 @@
 package lv0.training.java;
 
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
 /**
  * <h1>Day16 클래스</h1>
  * Programmers 코딩 기초 트레이닝 - Day 16 문자열
@@ -29,6 +32,16 @@ public class Day16 {
         return myString.toLowerCase();
     }
 
+    /**
+     * solution3 배열에서 문자열 대소문자 변환하기
+     *
+     * @param strArr 모든 원소가 알파벳으로만 이루어진 문자열 배열
+     * @return strArr의 홀수번째 인덱스의 문자열은 모든 문자를 대문자로, 짝수번째 인덱스의 문자열은 모든 문자를 소문자로 바꿔서 반환
+     */
+    private String[] solution3(String[] strArr) {
+        return IntStream.range(0, strArr.length).mapToObj(i -> i % 2 == 0 ? strArr[i].toLowerCase() : strArr[i].toUpperCase()).toArray(String[]::new);
+    }
+
     public static void main(String[] args) {
         Day16 day16 = new Day16();
 
@@ -37,5 +50,8 @@ public class Day16 {
 
         System.out.println(day16.solution2("aBcDeFg"));
         System.out.println(day16.solution2("aaa"));
+
+        System.out.println(Arrays.toString(day16.solution3(new String[]{"AAA", "BBB", "CCC", "DDD"})));
+        System.out.println(Arrays.toString(day16.solution3(new String[]{"aBc", "AbC"})));
     }
 }
