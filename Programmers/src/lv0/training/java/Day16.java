@@ -39,7 +39,19 @@ public class Day16 {
      * @return strArr의 홀수번째 인덱스의 문자열은 모든 문자를 대문자로, 짝수번째 인덱스의 문자열은 모든 문자를 소문자로 바꿔서 반환
      */
     private String[] solution3(String[] strArr) {
-        return IntStream.range(0, strArr.length).mapToObj(i -> i % 2 == 0 ? strArr[i].toLowerCase() : strArr[i].toUpperCase()).toArray(String[]::new);
+        return IntStream.range(0, strArr.length)
+                .mapToObj(i -> i % 2 == 0 ? strArr[i].toLowerCase() : strArr[i].toUpperCase())
+                .toArray(String[]::new);
+    }
+
+    /**
+     * solution4 A 강조하기
+     *
+     * @param myString 알파벳으로 이루어진 문자열
+     * @return 알파벳 "a"가 등장하면 전부 "A"로 변환하고, "A"가 아닌 모든 대문자 알파벳은 소문자 알파벳으로 변환하여 반환
+     */
+    private String solution4(String myString) {
+        return myString.toLowerCase().replace("a", "A");
     }
 
     public static void main(String[] args) {
@@ -53,5 +65,8 @@ public class Day16 {
 
         System.out.println(Arrays.toString(day16.solution3(new String[]{"AAA", "BBB", "CCC", "DDD"})));
         System.out.println(Arrays.toString(day16.solution3(new String[]{"aBc", "AbC"})));
+
+        System.out.println(day16.solution4("abstract algebra"));
+        System.out.println(day16.solution4("PrOgRaMmErS"));
     }
 }
