@@ -57,6 +57,16 @@ public class Day17 {
         return my_string.split("\\s");
     }
 
+    /**
+     * solution5 공백으로 구분하기 2
+     *
+     * @param my_string 단어가 공백 한 개 이상으로 구분되어 있는 문자열
+     * @return my_string에 나온 단어를 앞에서부터 순서대로 담은 문자열 배열을 반환
+     */
+    private String[] solution5(String my_string) {
+        return my_string.trim().split("\\s+");
+    }
+
     public static void main(String[] args) {
         Day17 day17 = new Day17();
 
@@ -71,5 +81,8 @@ public class Day17 {
 
         System.out.println(Arrays.toString(day17.solution4("i love you")));
         System.out.println(Arrays.toString(day17.solution4("programmers")));
+
+        System.out.println(Arrays.toString(day17.solution5(" i    love  you")));
+        System.out.println(Arrays.toString(day17.solution5("    programmers  ")));
     }
 }
