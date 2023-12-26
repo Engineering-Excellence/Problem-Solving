@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.stream.IntStream;
 
 /**
- * <h1>Day16 클래스</h1>
- * Programmers 코딩 기초 트레이닝 - Day 16 문자열
+ * <h1>Day 16 문자열</h1>
+ * Programmers 코딩 기초 트레이닝
  *
  * @author Kyle
  * @since 2023.12.24
