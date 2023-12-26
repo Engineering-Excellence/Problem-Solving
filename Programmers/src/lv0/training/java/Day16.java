@@ -54,6 +54,17 @@ public class Day16 {
         return myString.toLowerCase().replace("a", "A");
     }
 
+    /**
+     * 특정한 문자를 대문자로 바꾸기
+     *
+     * @param my_string 영소문자로 이루어진 문자열
+     * @param alp       영소문자 1글자로 이루어진 문자열
+     * @return my_string에서 alp에 해당하는 모든 글자를 대문자로 바꾼 문자열
+     */
+    private String solution5(String my_string, String alp) {
+        return my_string.replace(alp, alp.toUpperCase());
+    }
+
     public static void main(String[] args) {
         Day16 day16 = new Day16();
 
@@ -68,5 +79,8 @@ public class Day16 {
 
         System.out.println(day16.solution4("abstract algebra"));
         System.out.println(day16.solution4("PrOgRaMmErS"));
+
+        System.out.println(day16.solution5("programmers", "p"));
+        System.out.println(day16.solution5("lowercase", "x"));
     }
 }
