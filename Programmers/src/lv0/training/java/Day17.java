@@ -1,5 +1,7 @@
 package lv0.training.java;
 
+import java.util.Arrays;
+
 /**
  * <h1>Day17 문자열</h1>
  * Programmers 코딩 기초 트레이닝
@@ -35,6 +37,16 @@ public class Day17 {
         return cnt;
     }
 
+    /**
+     * solution3 ad 제거하기
+     *
+     * @param strArr 알파벳 소문자로 이루어진 문자열 배열
+     * @return 배열 내의 문자열 중 "ad"라는 부분 문자열을 포함하고 있는 모든 문자열을 제거하고 남은 문자열을 순서를 유지하여 배열로 반환
+     */
+    private String[] solution3(String[] strArr) {
+        return Arrays.stream(strArr).filter(s -> !s.contains("ad")).toArray(String[]::new);
+    }
+
     public static void main(String[] args) {
         Day17 day17 = new Day17();
 
@@ -43,5 +55,8 @@ public class Day17 {
 
         System.out.println(day17.solution2("banana", "ana"));
         System.out.println(day17.solution2("aaaa", "aa"));
+
+        System.out.println(Arrays.toString(day17.solution3(new String[]{"and", "notad", "abcd"})));
+        System.out.println(Arrays.toString(day17.solution3(new String[]{"there", "are", "no", "a", "ds"})));
     }
 }
