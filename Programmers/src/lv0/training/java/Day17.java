@@ -47,6 +47,16 @@ public class Day17 {
         return Arrays.stream(strArr).filter(s -> !s.contains("ad")).toArray(String[]::new);
     }
 
+    /**
+     * solution4 공백으로 구분하기 1
+     *
+     * @param my_string 단어가 공백 한 개로 구분되어 있는 문자열
+     * @return my_string에 나온 단어를 앞에서부터 순서대로 담은 문자열 배열을 반환
+     */
+    private String[] solution4(String my_string) {
+        return my_string.split("\\s");
+    }
+
     public static void main(String[] args) {
         Day17 day17 = new Day17();
 
@@ -58,5 +68,8 @@ public class Day17 {
 
         System.out.println(Arrays.toString(day17.solution3(new String[]{"and", "notad", "abcd"})));
         System.out.println(Arrays.toString(day17.solution3(new String[]{"there", "are", "no", "a", "ds"})));
+
+        System.out.println(Arrays.toString(day17.solution4("i love you")));
+        System.out.println(Arrays.toString(day17.solution4("programmers")));
     }
 }
