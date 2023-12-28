@@ -47,6 +47,20 @@ class Day10:
         """
         return numbers[2 * (k - 1) % len(numbers)]
 
+    @staticmethod
+    def rotate_array(numbers: list, direction: str) -> list:
+        """
+        rotate_array 배열 회전시키기
+
+        :param numbers: 정수가 담긴 배열
+        :param direction: 문자열
+        :return: 배열 numbers의 원소를 direction방향으로 한 칸씩 회전시킨 배열
+        """
+        from collections import deque
+        q = deque(numbers)
+        q.rotate(1 if direction == 'right' else -1)
+        return list(q)
+
 
 if __name__ == '__main__':
     day10 = Day10()
