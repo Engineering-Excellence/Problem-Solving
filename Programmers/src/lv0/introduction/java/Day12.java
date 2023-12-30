@@ -1,6 +1,8 @@
 package lv0.introduction.java;
 
 import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 /**
  * <h1>Day12 문자열, 정렬, 사칙연산, 수학</h1>
@@ -43,6 +45,26 @@ public class Day12 {
         return my_string.chars().filter(Character::isDigit).map(Character::getNumericValue).sum();
     }
 
+    /**
+     * primeFactorization 소인수분해
+     *
+     * @param n 자연수
+     * @return n의 소인수를 오름차순으로 담은 배열
+     */
+    private int[] primeFactorization(int n) {
+        Set<Integer> set = new LinkedHashSet<>();
+        int i = 2;
+        while (n > 1 && i <= n) {
+            if (n % i == 0) {
+                set.add(i);
+                n /= i;
+            } else {
+                i++;
+            }
+        }
+        return set.stream().mapToInt(Integer::intValue).toArray();
+    }
+
     public static void main(String[] args) {
 
         Day12 day12 = new Day12();
@@ -60,5 +82,11 @@ public class Day12 {
 
         System.out.println(day12.hiddenSum("aAb1B2cC34oOp"));
         System.out.println(day12.hiddenSum("1a2b3c4d123"));
+
+        System.out.println("-".repeat(40));
+
+        System.out.println(Arrays.toString(day12.primeFactorization(12)));
+        System.out.println(Arrays.toString(day12.primeFactorization(17)));
+        System.out.println(Arrays.toString(day12.primeFactorization(420)));
     }
 }
