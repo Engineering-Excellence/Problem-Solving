@@ -3,4 +3,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 project(Programmers)
 
-add_executable(programmers_training_day8 src/lv0/training/c/day8.c)
+add_executable(basic_day8 src/lv0/basic/c/day8.c)
+add_executable(basic_day21 src/lv0/basic/c/day21.c)

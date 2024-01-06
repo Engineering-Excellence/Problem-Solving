@@ -1,4 +1,4 @@
-package lv0.training.java;
+package lv0.basic.java;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
@@ -55,7 +55,7 @@ public class Day16 {
     }
 
     /**
-     * 특정한 문자를 대문자로 바꾸기
+     * solution5 특정한 문자를 대문자로 바꾸기
      *
      * @param my_string 영소문자로 이루어진 문자열
      * @param alp       영소문자 1글자로 이루어진 문자열

@@ -1,4 +1,4 @@
-package lv0.training.java;
+package lv0.basic.java;
 
 import java.util.Arrays;
 
