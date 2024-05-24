@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @author Kyle
  * @since 2024.05.22.
  */
-public class PCCE_3 {
+public class PCCE3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int year = sc.nextInt();

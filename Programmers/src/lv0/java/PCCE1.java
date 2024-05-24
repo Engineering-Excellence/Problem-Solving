@@ -6,7 +6,7 @@ package lv0.pcce.java;
  * @author Kyle
  * @since 2023.12.26.
  */
-public class PCCE_1 {
+public class PCCE1 {
 
     public static void main(String[] args) {
         String msg = "Spring is beginning";
