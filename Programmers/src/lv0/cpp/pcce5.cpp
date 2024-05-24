@@ -40,5 +40,6 @@ int main() {
     string route = "NSSNEWWN";
     vector<int> result = solution(route);
     cout << "µ¿ÂÊÀ¸·Î " << result[0] << "Ä­, ºÏÂÊÀ¸·Î " << result[1] << "Ä­ ÀÌµ¿Çß½À´Ï´Ù." << endl;
+
     return 0;
 }

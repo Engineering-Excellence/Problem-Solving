@@ -75,5 +75,6 @@ int main() {
     cout << solution("auto", 23, 45) << endl;
     cout << solution("target", 41, 40) << endl;
     cout << solution("minimum", 10, 34) << endl;
+
     return 0;
 }

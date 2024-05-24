@@ -1,4 +1,4 @@
-package lv0.pcce.java;
+package lv0.java;
 
 /**
  * <h1>[PCCE 기출문제] 1번 / 출력</h1>

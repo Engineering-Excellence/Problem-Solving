@@ -1,4 +1,4 @@
-package lv0.pcce.java;
+package lv0.java;
 
 import java.util.Scanner;
 

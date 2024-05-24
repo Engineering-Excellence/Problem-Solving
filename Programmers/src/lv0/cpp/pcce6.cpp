@@ -43,5 +43,6 @@ int main() {
     printvector(result);
     result = solution({3, 4}, {85, 93}, {85, 92, 38, 93, 48, 85, 92, 56});
     printvector(result);
+
     return 0;
 }
