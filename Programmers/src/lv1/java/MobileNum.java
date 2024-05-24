@@ -1,7 +1,7 @@
 package lv1.java;
 
 // 핸드폰 번호 가리기
-public class mobileNum {
+public class MobileNum {
 
     private String solution(String phone_number) {
 
@@ -10,7 +10,7 @@ public class mobileNum {
 
     public static void main(String[] args) {
 
-        mobileNum mobileNum = new mobileNum();
+        MobileNum mobileNum = new MobileNum();
 
         System.out.println(mobileNum.solution("01033334444"));
         System.out.println(mobileNum.solution("027778888"));
