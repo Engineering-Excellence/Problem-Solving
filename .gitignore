@@ -140,5 +140,6 @@ Temporary Items
 .apdisk
 
 ### Custom ###
+.vscode/
 .ipynb_checkpoints/
 BAEKJOON/sample_input.txt
