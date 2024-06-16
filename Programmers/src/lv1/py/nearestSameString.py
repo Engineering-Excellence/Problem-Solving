@@ -1,4 +1,4 @@
-def solution(s:str)->list:
+def solution(s: str) -> list:
     """
     가장 가까운 같은 글자
 
