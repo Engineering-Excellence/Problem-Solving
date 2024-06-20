@@ -12,5 +12,5 @@ def solution(strings: list, n: int) -> list:
     return sorted(strings, key=lambda x: (x[n], x))
 
 
-print(solution(["sun", "bed", "car"], 1))
-print(solution(["abce", "abcd", "cdx"], 2))
+print(solution(strings=["sun", "bed", "car"], n=1))
+print(solution(strings=["abce", "abcd", "cdx"], n=2))
