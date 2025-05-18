@@ -142,4 +142,5 @@ Temporary Items
 ### Custom ###
 .vscode/
 .ipynb_checkpoints/
-BAEKJOON/sample_input.txt
+BAEKJOON/src/CMakeLists.txt
+BAEKJOON/src/main.*
