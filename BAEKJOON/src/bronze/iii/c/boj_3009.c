@@ -11,9 +11,9 @@
 int main(void) {
     int x = 0, y = 0, tx, ty;
 
-    for (int i = 0; i < 3; ++i) {   // z ^ z == 0 이므로 x ^ z ^ z == x
+    for (int i = 0; i < 3; ++i) {
         scanf("%d %d", &tx, &ty);
-        x ^= tx;
+        x ^= tx;    // z ^ z == 0 이므로 x ^ z ^ z == x
         y ^= ty;
     }
 
